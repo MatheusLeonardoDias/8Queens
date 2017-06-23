@@ -6,6 +6,8 @@ class Board{
 		Board( int );
 		~Board();
 		void print();
+		std::list<std::pair<int,int>> safePositionsBacktracking();
+		bool isSafePosition( std::pair<int,int> a, std::pair<int,int> b );
 };
 
 Board::Board( int n ){
@@ -47,3 +49,43 @@ void Board::print(){
 	}
 
 }
+
+std::list<std::pair<int,int>> Board::safePositionsBacktracking( int current ){
+
+	if( current >= this.lenght )
+		return true;
+
+	for( int i = 0; i < this.lenght; i++ ){
+		if( isSafePosition( std::make_pair( i, current ) ) ){
+
+		}
+
+
+	}
+
+}
+
+bool Board::isSafePosition( std::pair<int,int> a ){
+
+	// Row
+	for( int i = 0; i < this.lenght; i++ ){
+		if( table[i][a.second] == true )
+			return false;
+	}
+
+	// Upper Diagonal
+	for( int i = 0; i < this.lenght; i++ ){
+		if( table[i][a.second] == true )
+			return false;
+	}
+
+	// Lower Diagonal
+	for( int i = 0; i < this.lenght; i++ ){
+		if( table[i][a.second] == true )
+			return false;
+	}
+}
+
+
+
+
