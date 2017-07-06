@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
 #include "board.h"
+#include "SolutionNode.h"
 using namespace std;
-
-
-
 
 int main( int argc, char* argv[] ){
 	long length = 8;

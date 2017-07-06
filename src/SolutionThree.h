@@ -1,0 +1,7 @@
+class SolutionTree{
+	private:
+
+	public:
+		
+
+}
